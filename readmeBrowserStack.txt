@@ -1,4 +1,5 @@
 
-export BROWSERSTACK_USERNAME=kirankumar_Wpf6Ho BROWSERSTACK_ACCESS_KEY=qsDLkg9Pp3pBEjZ87TW7
+Run npm i
 
-test git push
+Run Tests:
+npx wdio wdio.conf.js
