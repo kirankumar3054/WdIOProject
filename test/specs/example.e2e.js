@@ -12,14 +12,14 @@ describe('My Login application', () => {
             'You logged into a secure area!');
     });
 
-    it('should login with Invalid credentials', async () => {
+    it('should NOT login with Invalid credentials', async () => {
         await LoginPage.open();
         await expect (browser).toHaveTitle('The Internet')
 
         await LoginPage.login('invalid', 'invalid');
         await expect(SecurePage.flashAlert).toBeExisting();
         await expect(SecurePage.flashAlert).toHaveTextContaining(
-            'You logged into a secure area!');
+            'Your username is invalid!');
     });
 
 });
